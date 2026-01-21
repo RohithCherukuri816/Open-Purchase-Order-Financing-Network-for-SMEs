@@ -1,0 +1,23 @@
+# General
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Environment Variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Subdirectories
+backend/__pycache__/
+backend/*.db
+blockchain/node_modules/
+blockchain/artifacts/
+blockchain/cache/
+frontend/node_modules/
+frontend/dist/
+ai/__pycache__/
+ai/.venv/

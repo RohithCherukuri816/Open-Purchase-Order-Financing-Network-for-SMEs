@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --bg-platinum: #FDFCFB;
+  --bg-white: #FFFFFF;
+  --primary-orange: #F97316;
+  --primary-orange-dark: #EA580C;
+  --accent-amber: #F59E0B;
+  --accent-amber-light: #FEF3C7;
+  --text-main: #0F172A;
+  --text-muted: #475569;
+  --border-light: #F1F5F9;
+  --shadow-soft: 0 4px 20px rgba(249, 115, 22, 0.05);
+  --shadow-md: 0 10px 40px rgba(249, 115, 22, 0.1);
+  --gradient-orange: linear-gradient(135deg, #F97316 0%, #EA580C 100%);
+  --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.6) 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background-color: var(--bg-platinum);
+  color: var(--text-main);
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+}
+
+.premium-card {
+  background: var(--bg-white);
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--border-light);
+  transition: all 0.3s ease;
+}
+
+.premium-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-5px);
+}
+
+.glass-morphism {
+  background: var(--gradient-glass);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-primary {
+  background: var(--gradient-orange);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 12px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
+}
+
+.btn-primary:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 20px rgba(249, 115, 22, 0.4);
+}
+
+.sidebar {
+  width: 280px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: var(--bg-white);
+  border-right: 1px solid var(--border-light);
+  padding: 40px 24px;
+  z-index: 100;
+}
+
+.main-content {
+  margin-left: 280px;
+  padding: 40px;
+  min-height: 100vh;
+}
+
+.status-badge {
+  padding: 6px 14px;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.status-created {
+  background: #FFEDD5;
+  color: #9A3412;
+}
+
+.status-financed {
+  background: #FEF3C7;
+  color: #92400E;
+}
+
+.status-delivered {
+  background: #ECFDF5;
+  color: #065F46;
+}
+
+.status-closed {
+  background: #F8FAFC;
+  color: #475569;
+}
+
+.po-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 24px;
+  margin-top: 32px;
+}
